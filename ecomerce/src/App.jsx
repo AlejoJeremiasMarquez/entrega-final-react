@@ -8,8 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from "./context/CartContext";
 import { NotificationProvider } from "./context/NotificationContext";
 
-import ProductUpload from "./components/ProductsUpload/ProductUpload";
-import { subirProductosFake } from "./asyncMock";
+//import ProductUpload from "./components/ProductsUpload/ProductUpload";
+//import { subirProductosFake } from "./asyncMock";
 
 function App() {
   
@@ -36,9 +36,9 @@ function App() {
 
               <Route exact path="/checkout" element={<Checkout />} />
 
-{/*                <Route exact path="/productupload" element={<ProductUpload />} />  */}
+{/*              <Route exact path="/productupload" element={<ProductUpload />} />  */}
 
-               <Route path="*" element={<h1>:( 404 Not found</h1>} /> 
+              <Route path="*" element={<h1>:( 404 Not found</h1>} /> 
             </Routes>
           </CartProvider>
         </NotificationProvider>

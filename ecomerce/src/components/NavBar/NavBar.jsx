@@ -31,9 +31,9 @@ function NavBar({ title }) {
                   isActive ? "ActiveOption" : "Option"
                 }
                 aria-current="page"
-                to="/category/phones"
+                to="/category/alta-gama"
               >
-                Phones
+                Alta Gama
               </NavLink>
             </li>
             <li className="nav-item">
@@ -41,9 +41,9 @@ function NavBar({ title }) {
                 className={({ isActive }) =>
                   isActive ? "ActiveOption" : "Option"
                 }
-                to="/category/tablets"
+                to="/category/0km"
               >
-                Tablets
+                0km
               </NavLink>
             </li>
             <li className="nav-item">
@@ -51,9 +51,9 @@ function NavBar({ title }) {
                 className={({ isActive }) =>
                   isActive ? "ActiveOption" : "Option"
                 }
-                to="category/computers"
+                to="category/usados"
               >
-                Computers
+                Usados
               </NavLink>
             </li>
 {/*             <li className="nav-item">

@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import { subirProductosFake } from '../../asyncMock'
 
 function ProductUpload() {
@@ -6,4 +6,4 @@ function ProductUpload() {
   return <div>🇦🇹🇦🇹🇦🇹🇦🇹🇦🇹🇦🇹🇦🇹🇦🇹</div>;
 }
 
-export default ProductUpload
+export default ProductUpload */
