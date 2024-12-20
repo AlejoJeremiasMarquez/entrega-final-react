@@ -1,3 +1,15 @@
 h1{
   align-self: center;
 }
+
+.sumarAlCarrito {
+  margin: 0px 10px;
+}
+
+.sumar{
+  border: 1px solid rgb(0, 155, 5);
+}
+
+.restar{
+  border: 1px solid rgb(153, 0, 0);
+}

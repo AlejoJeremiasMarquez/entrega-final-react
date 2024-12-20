@@ -72,7 +72,6 @@ const Checkout = () => {
         setOrderCreated(true);
         clearCart();
       } else {
-        // falta logica de compra o encargo de productos
         console.log("Hay productos que estan fuera de stock");
       }
     } catch (error) {

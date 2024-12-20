@@ -20,9 +20,9 @@ function ItemCount({initialValue=1, stock, onAdd}) {
     <>
       <h1>{count}</h1>
       <div>
-        <button onClick={decrement}>Decrementa</button>
-        <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
-        <button onClick={increment}>Incremento</button>
+        <button className='btn btn-light restar' onClick={decrement}>Decrementa</button>
+        <button className='btn btn-primary sumarAlCarrito' onClick={() => onAdd(count)}>Agregar al Carrito</button>
+        <button className='btn btn-light sumar' onClick={increment}>Incremento</button>
       </div>
     </>
   );
