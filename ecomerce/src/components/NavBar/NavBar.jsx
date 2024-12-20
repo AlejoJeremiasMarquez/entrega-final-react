@@ -4,72 +4,37 @@ import "./NavBar.css";
 
 function NavBar({ title }) {
   return (
-    <nav
-      style={{ width: "80%", margin: "0 auto" }}
-      className="navbar navbar-expand-lg bg-body-tertiary"
-    >
-      <div className="container-fluid">
+    <nav className="navbar-container">
+      <div className="navbar-content">
         <Link className="navbar-brand" to="/">
-          {title}
+          <span className="navbar-text">Star Car</span>
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "ActiveOption" : "Option"
-                }
-                aria-current="page"
-                to="/category/alta-gama"
-              >
-                Alta Gama
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "ActiveOption" : "Option"
-                }
-                to="/category/0km"
-              >
-                0km
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "ActiveOption" : "Option"
-                }
-                to="category/usados"
-              >
-                Usados
-              </NavLink>
-            </li>
-{/*             <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "ActiveOption" : "Option"
-                }
-                to="/productupload"
-              >
-                subir productos
-              </NavLink>
-            </li> */}
-          </ul>
-          <form className="d-flex" role="search">
-            <CardWidget />
-          </form>
+        <ul className="navbar-links">
+          <li>
+            <NavLink className = {({ isActive }) =>
+                isActive ? "navbar-link active" : "navbar-link"} to="/category/alta-gama">
+              Alta Gama
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className = {({ isActive }) => 
+                isActive ? "navbar-link active" : "navbar-link" } to="/category/0km">
+              0km
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className={({ isActive }) =>
+                isActive ? "navbar-link active" : "navbar-link"} to="/category/usados">
+              Usados
+            </NavLink>
+          </li>
+
+        </ul>
+
+        <div className="navbar-widget">
+          <CardWidget />
         </div>
       </div>
     </nav>

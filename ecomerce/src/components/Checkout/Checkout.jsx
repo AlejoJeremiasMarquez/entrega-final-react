@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useCart } from "../../hooks/useCart"
 import { addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase"
+import "./Checkout.css"
 
 
 const Checkout = () => {
@@ -92,24 +93,27 @@ const Checkout = () => {
   return (
     <>
       {/* form de checkout */}
-      <label htmlFor="nombre">Nombre</label>
-      <input onChange={(e) => setNombre(e.target.value)} value={nombre} />{" "}
-      <br />
-      <label htmlFor="apellido">Apellido</label>
-      <input onChange={(e) => setApellido(e.target.value)} value={apellido} />
-      <br />
-      <label htmlFor="telefono">Telefono</label>
-      <input onChange={(e) => setTelefono(e.target.value)} value={telefono} />
-      <br />
-      <label htmlFor="direccion">Addres</label>
-      <input onChange={(e) => setDireccion(e.target.value)} value={direccion} />
+      <div className="form">
+        <label htmlFor="nombre">Nombre</label>
+        <input onChange={(e) => setNombre(e.target.value)} value={nombre} />{" "}
+        <br />
+        <label htmlFor="apellido">Apellido</label>
+        <input onChange={(e) => setApellido(e.target.value)} value={apellido} />
+        <br />
+        <label htmlFor="telefono">Telefono</label>
+        <input onChange={(e) => setTelefono(e.target.value)} value={telefono} />
+        <br />
+        <label htmlFor="direccion">Addres</label>
+        <input onChange={(e) => setDireccion(e.target.value)} value={direccion} />
+      </div>
+      
       <div>
         {cart.map((item) => (
           <article key={item.id}>
             <header>
-              <h2 className="text-secondary text-center bg-info m-5">
+              <h2 className="text-secondary text-center m-5">
                 {item.name}{" "}
-                <span className="badge">Cantidad: {totalQuantity}</span>
+                <span>Cantidad: {totalQuantity}</span>
               </h2>
             </header>
           </article>
@@ -118,7 +122,7 @@ const Checkout = () => {
       <h1 className="text-center">Checkout</h1>
       {/* formulario */}
       <div className="d-flex justify-content-center p-3 ">
-        <button className="btn btn-info" onClick={createOrder}>
+        <button className="btn btn-outline-success" onClick={createOrder}>
           Generar Orden
         </button>
       </div>

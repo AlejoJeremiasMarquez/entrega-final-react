@@ -1,0 +1,17 @@
+.articulos {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-counter {
+  display: flex;
+  flex-direction: column;
+}
+
+h2{
+  align-self: center;
+}
+
+h1{
+  align-self: center;
+}

@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
+import './Item.css';
 
-const Item = ({product}) => {
-    //console.log(product)
-    
+const Item = ({ product }) => {
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card">
       <img
         src={product.img}
-        style={{ width: 100, margin: "0 auto" }}
         className="card-img-top"
         alt={product.name}
       />
@@ -19,6 +17,6 @@ const Item = ({product}) => {
       </div>
     </div>
   );
-}
+};
 
-export default Item
+export default Item;

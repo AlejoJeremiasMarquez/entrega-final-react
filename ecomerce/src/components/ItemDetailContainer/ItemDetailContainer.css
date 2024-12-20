@@ -6,3 +6,11 @@
     min-height: 80vh;
     padding: 10px;
 }
+
+.LoadingMessage {
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}

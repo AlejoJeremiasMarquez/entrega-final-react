@@ -1,8 +1,9 @@
-//import logo from "../../assets/react.svg";
+
 import cart from "../../assets/cart.svg";
 import { useCart } from "../../hooks/useCart";
 import { Link } from "react-router-dom";
 import './CardWidget.css'
+
 function CardWidget() {
   const { totalQuantity } = useCart();
   return (

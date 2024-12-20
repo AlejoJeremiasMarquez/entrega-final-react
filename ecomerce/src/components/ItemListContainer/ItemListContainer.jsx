@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-//import { getProducts, getProductsByCategory } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../services/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useNotification } from "../../context/NotificationContext";
+import "./ItemListContainer.css";
+
 function ItemListContainer({greetings}) {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const {categoryId} = useParams()
     const {setNotification} = useNotification()
+
     useEffect(()=>{
       setLoading(true)
       const collectionRef = categoryId
@@ -18,7 +20,6 @@ function ItemListContainer({greetings}) {
       
       getDocs(collectionRef)
         .then((querySnapshot)=>{
-          //console.log(response)
           const products = querySnapshot.docs.map((doc)=>{
             return {id: doc.id, ...doc.data()}
           })
@@ -32,18 +33,8 @@ function ItemListContainer({greetings}) {
       })
     },[categoryId])
 
-    if(loading) {
-      return (
-        <h3
-          style={{
-            color: "white",
-            backgroundColor: "#d68fff",
-            textAlign: "center",
-          }}
-        >
-          Cargando productos...
-        </h3>
-      );
+    if (loading) {
+      return <h3 className="loading-message">Cargando productos...</h3>;
     }
 
   return (

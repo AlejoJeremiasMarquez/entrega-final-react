@@ -29,13 +29,7 @@ const ItemDetailContainer = () => {
   return (
     <div className="ItemDetailContainer">
       {loading ? (
-        <h3
-          style={{
-            color: "white",
-            backgroundColor: "#d68fff",
-            textAlign: "center",
-          }}
-        >
+        <h3 className="LoadingMessage">
           Cargando...
         </h3>
       ) : (
